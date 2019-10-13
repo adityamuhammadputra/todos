@@ -18,7 +18,7 @@ module.exports = {
     proxyTable:{
       '/api':{
         target:'http://localhost:8000',
-        changeOrigin:true,
+        changeOrigin:true
       }
     },
     autoOpenBrowser: false,
