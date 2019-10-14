@@ -3,6 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import Notifications from 'vue-notification'
+import toastr from 'vue-toastr'
+Vue.use(Notifications)
+Vue.use(toastr)
 
 require('../node_modules/bootstrap/dist/css/bootstrap.css')
 

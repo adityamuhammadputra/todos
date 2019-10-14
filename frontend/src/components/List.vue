@@ -49,6 +49,12 @@ export default {
       axios.get(`api/v1/todos`).then(
         result => {
           console.log(result.data)
+          this.$toastr.e('SUCCESS MESSAGE', 'Success Toast Title')
+          // this.$notify({
+          //   group: 'foo',
+          //   title: 'Important message',
+          //   text: 'Hello user! This is a notification!'
+          // })
           this.todos = result.data
         },
         error => {
