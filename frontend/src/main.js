@@ -5,13 +5,21 @@ import App from './App'
 import router from './router'
 import Notifications from 'vue-notification'
 import toastr from 'vue-toastr'
+// import Vuetify from 'vuetify'
+import Vuetify from 'vuetify'
+import 'vuetify/dist/vuetify.min.css'
+require('../node_modules/bootstrap/dist/css/bootstrap.css')
+// import vuetify from '@/plugins/vuetify'
+
 Vue.use(Notifications)
 Vue.use(toastr)
-
-require('../node_modules/bootstrap/dist/css/bootstrap.css')
+Vue.use(Vuetify)
 
 Vue.config.productionTip = false
 
+const opts = {}
+
+export default new Vuetify(opts)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

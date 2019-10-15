@@ -4,25 +4,27 @@
       <div class="row">
         <div class="text-center">
           <h1>{{ msg }}</h1>
+          <v-row justify="space-around">
+            <v-avatar color="indigo" size="100">
+              <span class="white--text headline">36</span>
+            </v-avatar>
+             <v-avatar color="teal" size="48">
+      <span class="white--text headline">48</span>
+    </v-avatar>
+            </v-row>
         </div>
       </div>
       <div class="row">
-        <form action="">
+         <v-form class="form">
           <div class="form-group">
-            <label for="email">Email address:</label>
-            <input type="email" class="form-control" id="email">
+             <v-text-field
+            label="Nama Tugas"
+            v-model="nama"
+            required
+            ></v-text-field>
           </div>
-          <div class="form-group">
-            <label for="pwd">Password:</label>
-            <input type="password" class="form-control" id="pwd">
-          </div>
-          <div class="form-group form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="checkbox"> Remember me
-            </label>
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+           <v-btn small color="primary">Primary</v-btn>
+        </v-form>
       </div>
     </div>
   </div>
@@ -34,13 +36,13 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome, Silahkan Login'
+      msg: 'Welcome, Silahkan Login',
+      nama: ''
     }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
 </style>

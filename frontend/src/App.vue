@@ -1,14 +1,30 @@
 <template>
   <div id="app">
     <!-- <img src="./assets/logo.png"> -->
+    <router-header/>
     <router-view/>
+    <router-footer/>
+
     <notifications group="foo" />
   </div>
 </template>
 
 <script>
+import header from './components/Header.vue'
+import footer from './components/Footer.vue'
 export default {
-  name: 'App'
+  name: 'App',
+
+  components: {
+    'router-header': header,
+    'router-footer': footer
+  },
+
+  data () {
+    return {
+
+    }
+  }
 }
 </script>
 
